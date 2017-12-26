@@ -1,6 +1,6 @@
 ## http://blog.topspeedsnail.com/archives/10660
 
-#下载的图片分布在多个目录，把图片汇总到一个新目录
+#下载的图片分布在多个目录，把图片汇总到一个新目录， 然后生成妹子图
 import os
 
 old_dir = 'images'

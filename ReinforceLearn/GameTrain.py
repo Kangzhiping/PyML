@@ -1,3 +1,6 @@
+# Deep Q Network
+# 深度强化学习, 训练游戏
+
 import pygame
 import random
 from pygame.locals import *

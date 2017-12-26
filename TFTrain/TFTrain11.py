@@ -1,9 +1,9 @@
 # google 现成的模型分类
 #$ cd tensorflow/models/image/imagenet/
-#$ python classify_image.py --image_file ~/Desktop/bigcat.jpg
+#$ PyML classify_image.py --image_file ~/Desktop/bigcat.jpg
 
 #训练
-#$ python tensorflow/tensorflow/examples/image_retraining/retrain.py --bottleneck_dir bottleneck
+#$ PyML tensorflow/tensorflow/examples/image_retraining/retrain.py --bottleneck_dir bottleneck
 #    --how_many_training_steps 4000 --model_dir model --output_graph output_graph.pb
 #    --output_labels output_labels.txt --image_dir girl_types/
 

@@ -41,7 +41,7 @@ from tensorflow.python.platform import gfile
 import numpy as np
 import tensorflow as tf
 #from tensorflow.contrib.keras.api.keras.datasets import cifar10
-from python.DeepLearn.cifar10 import cifar10
+from PyML.DeepLearn.cifar10 import cifar10
 
 FLAGS = tf.app.flags.FLAGS
 

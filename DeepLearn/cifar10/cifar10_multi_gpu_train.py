@@ -46,7 +46,7 @@ import numpy as np
 #from six.moves import range  # pylint: disable=redefined-builtin
 import tensorflow as tf
 #from tensorflow.models.image.cifar10 import cifar10
-from python.DeepLearn.cifar10 import cifar10
+from PyML.DeepLearn.cifar10 import cifar10
 # pylint: disable=unused-import,g-bad-import-order
 
 FLAGS = tf.app.flags.FLAGS

@@ -44,7 +44,7 @@ import tensorflow as tf
 
 #from tensorflow.models.image.cifar10 import cifar10_input
 #import cifar10_input
-from python.DeepLearn.cifar10 import cifar10_input
+from PyML.DeepLearn.cifar10 import cifar10_input
 
 FLAGS = tf.app.flags.FLAGS
 
