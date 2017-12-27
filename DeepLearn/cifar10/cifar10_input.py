@@ -32,14 +32,14 @@ from tensorflow.python.platform import gfile
 # architecture will change and any model would need to be retrained.
 IMAGE_SIZE = 24
 
-# Global constants describing the CIFAR-10 data set.
+# Global constants describing the CIFAR-10 ch2_data set.
 NUM_CLASSES = 10
 NUM_EXAMPLES_PER_EPOCH_FOR_TRAIN = 50000
 NUM_EXAMPLES_PER_EPOCH_FOR_EVAL = 10000
 
 
 def read_cifar10(filename_queue):
-  """Reads and parses examples from CIFAR10 data files.
+  """Reads and parses examples from CIFAR10 ch2_data files.
   Recommendation: if you want N-way read parallelism, call this function
   N times.  This will give you N independent Readers reading different
   files & positions within those files, which will give better mixing of
@@ -54,7 +54,7 @@ def read_cifar10(filename_queue):
       key: a scalar string Tensor describing the filename & record number
         for this example.
       label: an int32 Tensor with the label in the range 0..9.
-      uint8image: a [height, width, depth] uint8 Tensor with the image data
+      uint8image: a [height, width, depth] uint8 Tensor with the image ch2_data
   """
 
   class CIFAR10Record(object):
@@ -128,7 +128,7 @@ def _generate_image_and_label_batch(image, label, min_queue_examples,
 def distorted_inputs(data_dir, batch_size):
   """Construct distorted input for CIFAR training using the Reader ops.
   Args:
-    data_dir: Path to the CIFAR-10 data directory.
+    data_dir: Path to the CIFAR-10 ch2_data directory.
     batch_size: Number of images per batch.
   Returns:
     images: Images. 4D tensor of [batch_size, IMAGE_SIZE, IMAGE_SIZE, 3] size.
@@ -185,8 +185,8 @@ def distorted_inputs(data_dir, batch_size):
 def inputs(eval_data, data_dir, batch_size):
   """Construct input for CIFAR evaluation using the Reader ops.
   Args:
-    eval_data: bool, indicating if one should use the train or eval data set.
-    data_dir: Path to the CIFAR-10 data directory.
+    eval_data: bool, indicating if one should use the train or eval ch2_data set.
+    data_dir: Path to the CIFAR-10 ch2_data directory.
     batch_size: Number of images per batch.
   Returns:
     images: Images. 4D tensor of [batch_size, IMAGE_SIZE, IMAGE_SIZE, 3] size.

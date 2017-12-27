@@ -16,7 +16,7 @@
 """A binary to train CIFAR-10 using multiple GPU's with synchronous updates.
 Accuracy:
 cifar10_multi_gpu_train.py achieves ~86% accuracy after 100K steps (256
-epochs of data) as judged by cifar10_eval.py.
+epochs of ch2_data) as judged by cifar10_eval.py.
 Speed: With batch_size 128.
 System        | Step Time (sec/batch)  |     Accuracy
 --------------------------------------------------------------------
@@ -27,7 +27,7 @@ System        | Step Time (sec/batch)  |     Accuracy
 4 Tesla K20m  | ~0.10                  | ~84% at 30K steps
 Usage:
 Please see the tutorial and website for how to download the CIFAR-10
-data set, compile the program and train the model.
+ch2_data set, compile the program and train the model.
 http://tensorflow.org/tutorials/deep_cnn/
 """
 from __future__ import absolute_import
@@ -67,7 +67,7 @@ def tower_loss(scope):
   Args:
     scope: unique prefix string identifying the CIFAR tower, e.g. 'tower_0'
   Returns:
-     Tensor of shape [] containing the total loss for a batch of data
+     Tensor of shape [] containing the total loss for a batch of ch2_data
   """
   # Get images and labels for CIFAR-10.
   images, labels = cifar10.distorted_inputs()
@@ -181,7 +181,7 @@ def train():
           # Retain the summaries from the final tower.
           summaries = tf.get_collection(tf.GraphKeys.SUMMARIES, scope)
 
-          # Calculate the gradients for the batch of data on this CIFAR tower.
+          # Calculate the gradients for the batch of ch2_data on this CIFAR tower.
           grads = opt.compute_gradients(loss)
 
           # Keep track of the gradients across all towers.

@@ -159,8 +159,8 @@ biases = {
 }
 
 def BiRNN(x, weights, biases):
-    # Prepare data shape to match `bidirectional_rnn` function requirements
-    # Current data input shape: (batch_size, n_steps, n_input)
+    # Prepare ch2_data shape to match `bidirectional_rnn` function requirements
+    # Current ch2_data input shape: (batch_size, n_steps, n_input)
     # Required shape: 'n_steps' tensors list of shape (batch_size, n_input)
 
     # Permuting batch_size and n_steps
@@ -218,12 +218,12 @@ with tf.Session() as sess:
     print("Optimization Finished!")
     # Calculate accuracy for 128 mnist test images
     # test_len = 1280
-    print("Accuracy in data set")
+    print("Accuracy in ch2_data set")
     test_data = fac[:batch_size].reshape([batch_size, n_steps, n_input])
     test_label = ret[:batch_size].reshape([batch_size, n_classes])
     print("Testing Accuracy:", sess.run(accuracy, feed_dict={x: test_data, y: test_label}))
 
-    print("Accuracy out of data set")
+    print("Accuracy out of ch2_data set")
     test_dataT = facT[:batch_size].reshape([batch_size, n_steps, n_input])
     test_labelT = retT[:batch_size].reshape([batch_size, n_classes])
     print("Testing Accuracy:", sess.run(accuracy, feed_dict={x: test_dataT, y: test_labelT}))

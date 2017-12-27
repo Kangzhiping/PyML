@@ -16,7 +16,7 @@
 """A binary to train CIFAR-10 using a single GPU.
 Accuracy:
 cifar10_train.py achieves ~86% accuracy after 100K steps (256 epochs of
-data) as judged by cifar10_eval.py.
+ch2_data) as judged by cifar10_eval.py.
 Speed: With batch_size 128.
 System        | Step Time (sec/batch)  |     Accuracy
 ------------------------------------------------------------------
@@ -24,7 +24,7 @@ System        | Step Time (sec/batch)  |     Accuracy
 1 Tesla K40m  | 0.25-0.35              | ~86% at 100K steps (4 hours)
 Usage:
 Please see the tutorial and website for how to download the CIFAR-10
-data set, compile the program and train the model.
+ch2_data set, compile the program and train the model.
 http://tensorflow.org/tutorials/deep_cnn/
 """
 from __future__ import absolute_import

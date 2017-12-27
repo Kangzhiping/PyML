@@ -23,8 +23,8 @@ from nltk.stem import WordNetLemmatizer
 词形还原(lemmatizer)，即把一个任何形式的英语单词还原到一般形式，与词根还原不同(stemmer)，后者是抽取一个单词的词根。
 """
 
-pos_file = 'data/pos.txt'
-neg_file = 'data/neg.txt'
+pos_file = 'ch2_data/pos.txt'
+neg_file = 'ch2_data/neg.txt'
 
 
 # 创建词汇表

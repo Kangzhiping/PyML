@@ -52,9 +52,9 @@ FLAGS = tf.app.flags.FLAGS
 tf.app.flags.DEFINE_integer('batch_size', 128,
                             """Number of images to process in a batch.""")
 tf.app.flags.DEFINE_string('data_dir', 'cifar10_data/',
-                           """Path to the CIFAR-10 data directory.""")
+                           """Path to the CIFAR-10 ch2_data directory.""")
 
-# Global constants describing the CIFAR-10 data set.
+# Global constants describing the CIFAR-10 ch2_data set.
 IMAGE_SIZE = cifar10_input.IMAGE_SIZE
 NUM_CLASSES = cifar10_input.NUM_CLASSES
 NUM_EXAMPLES_PER_EPOCH_FOR_TRAIN = cifar10_input.NUM_EXAMPLES_PER_EPOCH_FOR_TRAIN
@@ -144,7 +144,7 @@ def distorted_inputs():
 def inputs(eval_data):
   """Construct input for CIFAR evaluation using the Reader ops.
   Args:
-    eval_data: bool, indicating if one should use the train or eval data set.
+    eval_data: bool, indicating if one should use the train or eval ch2_data set.
   Returns:
     images: Images. 4D tensor of [batch_size, IMAGE_SIZE, IMAGE_SIZE, 3] size.
     labels: Labels. 1D tensor of [batch_size] size.

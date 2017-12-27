@@ -40,7 +40,7 @@ def placeholder_inputs(batch_size):
   """Generate placeholder variables to represent the input tensors.
 
   These placeholders are used as inputs by the rest of the model building
-  code and will be fed from the downloaded data in the .run() loop, below.
+  code and will be fed from the downloaded ch2_data in the .run() loop, below.
 
   Args:
     batch_size: The batch size will be baked into both placeholders.
@@ -51,7 +51,7 @@ def placeholder_inputs(batch_size):
   """
   # Note that the shapes of the placeholders match the shapes of the full
   # image and label tensors, except the first dimension is now batch_size
-  # rather than the full size of the train or test data sets.
+  # rather than the full size of the train or test ch2_data sets.
   images_placeholder = tf.placeholder(tf.float32, shape=(batch_size,
                                                          mnist.IMAGE_PIXELS))
   labels_placeholder = tf.placeholder(tf.int32, shape=(batch_size))
@@ -91,7 +91,7 @@ def do_eval(sess,
             images_placeholder,
             labels_placeholder,
             data_set):
-  """Runs one evaluation against the full epoch of data.
+  """Runs one evaluation against the full epoch of ch2_data.
 
   Args:
     sess: The session in which the model has been trained.
@@ -266,19 +266,19 @@ if __name__ == '__main__':
       type=str,
       default=os.path.join(os.getenv('TEST_TMPDIR', 'C:/Users/IBM_ADMIN/MikeFile/Python'),
                            'tensorflow/mnist/input_data'),
-      help='Directory to put the input data.'
+      help='Directory to put the input ch2_data.'
   )
   parser.add_argument(
       '--log_dir',
       type=str,
       default=os.path.join(os.getenv('TEST_TMPDIR', 'C:/Users/IBM_ADMIN/MikeFile/Python'),
                            'tensorflow/mnist/logs/fully_connected_feed'),
-      help='Directory to put the log data.'
+      help='Directory to put the log ch2_data.'
   )
   parser.add_argument(
       '--fake_data',
       default=False,
-      help='If true, uses fake data for unit testing.',
+      help='If true, uses fake ch2_data for unit testing.',
       action='store_true'
   )
 

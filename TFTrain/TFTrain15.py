@@ -1,9 +1,9 @@
 # 中文语音识别
 # THCHS30是Dong Wang, Xuewei Zhang, Zhiyong Zhang这几位大神发布的开放语音数据集，可用于开发中文语音识别系统
 '''
-$ wget http://data.cslt.org/thchs30/zip/wav.tgz
-$ wget http://data.cslt.org/thchs30/zip/doc.tgz
-$ wget http://data.cslt.org/thchs30/zip/lm.tgz
+$ wget http://ch2_data.cslt.org/thchs30/zip/wav.tgz
+$ wget http://ch2_data.cslt.org/thchs30/zip/doc.tgz
+$ wget http://ch2_data.cslt.org/thchs30/zip/lm.tgz
 # 解压
 $ tar xvf wav.tgz
 $ tar xvf doc.tgz
@@ -17,8 +17,8 @@ from collections import Counter
 import librosa  # https://github.com/librosa/librosa
 
 # 训练样本路径
-wav_path = 'data/wav/train'
-label_file = 'data/doc/trans/train.word.txt'
+wav_path = 'ch2_data/wav/train'
+label_file = 'ch2_data/doc/trans/train.word.txt'
 
 
 # 获得训练用的wav文件路径列表

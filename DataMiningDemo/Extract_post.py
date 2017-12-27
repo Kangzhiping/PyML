@@ -29,7 +29,5 @@ class ExtractPosts(MRJob):
             elif self.post_start:
                 self.post.append(line)
 
-
-
 if __name__ == '__main__':
     ExtractPosts.run()
