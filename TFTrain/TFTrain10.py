@@ -1,6 +1,7 @@
 
 # 实现谷歌Deep Dream
 # Inception模型是Google用两个星期，使用上百万张带分类的图片训练出的模型，在做图像识别时，为了节省时间，通常使用预训练的Inception模型做为训练基础
+# 合成图片的方式，叫Style Transfer
 
 # https://github.com/google/deepdream
 
